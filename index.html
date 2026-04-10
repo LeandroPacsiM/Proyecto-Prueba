@@ -1,11 +1,647 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio - Welcome to the Matrix">
+  <meta name="theme-color" content="#00ff41">
+  <title>Neo | Portfolio</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    
+  <!-- Digital Rain Background -->
+  <canvas id="matrix-rain"></canvas>
+  
+  <!-- Scanline Overlay -->
+  <div class="scanlines"></div>
+  
+  <!-- Terminal Header -->
+  <header class="terminal-header">
+    <div class="terminal-header__title">
+      <span class="prompt">></span>
+      <span class="text">guest@matrix:~/portfolio</span>
+    </div>
+    <div class="terminal-header__controls">
+      <span class="terminal-btn close"></span>
+      <span class="terminal-btn minimize"></span>
+      <span class="terminal-btn maximize"></span>
+    </div>
+  </header>
+  
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="container nav__container">
+      <a href="#" class="nav__logo glitch" data-text="NEO">NEO</a>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
+      <ul class="nav__menu" id="nav-menu">
+        <li class="nav__item">
+          <a href="#hero" class="nav__link active">
+            <span class="prompt">./</span>Home
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="#about" class="nav__link">
+            <span class="prompt">./</span>About
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="#projects" class="nav__link">
+            <span class="prompt">./</span>Projects
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="#skills" class="nav__link">
+            <span class="prompt">./</span>Skills
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="#contact" class="nav__link">
+            <span class="prompt">./</span>Contact
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="container hero__container">
+      <div class="hero__content">
+        <p class="hero__greeting reveal">
+          <span class="prompt">></span>
+          <span class="typewriter" id="hero-greeting">Wake up, Neo...</span>
+        </p>
+        <h1 class="hero__title reveal reveal-delay-1">
+          <span class="glitch" data-text="The Matrix Has You">The Matrix Has You</span>
+        </h1>
+        <p class="hero__subtitle reveal reveal-delay-2" id="hero-subtitle">
+          Follow the white rabbit. Enter the world of code.
+        </p>
+        <div class="hero__cta reveal reveal-delay-3">
+          <a href="#projects" class="btn btn--primary">
+            <span class="btn__text">View Projects</span>
+            <span class="btn__icon">→</span>
+          </a>
+          <a href="#contact" class="btn btn--secondary">
+            <span class="btn__text">Contact Me</span>
+          </a>
+        </div>
+      </div>
+      <div class="hero__terminal reveal reveal-delay-2">
+        <div class="terminal-window">
+          <div class="terminal-window__header">
+            <span class="terminal-window__title">terminal.exe</span>
+          </div>
+          <div class="terminal-window__body">
+            <div class="terminal-line">
+              <span class="prompt">user@matrix:~$</span>
+              <span class="command">whoami</span>
+            </div>
+            <div class="terminal-output">
+              > Full Stack Developer<br>
+              > Code Enthusiast<br>
+              > Matrix Operator
+            </div>
+            <div class="terminal-line">
+              <span class="prompt">user@matrix:~$</span>
+              <span class="command">./mission.sh</span>
+            </div>
+            <div class="terminal-output">
+              > Initializing portfolio...<br>
+              > Loading projects...<br>
+              > Ready to collaborate<span class="cursor">_</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span class="scroll-text">Scroll to explore</span>
+      <div class="scroll-arrow">↓</div>
+    </div>
+  </section>
+  
+  <!-- About Section -->
+  <section id="about" class="section about">
+    <div class="container">
+      <h2 class="section-title" data-text="About Me">
+        <span class="prompt">></span> About Me
+      </h2>
+      <div class="about__grid">
+        <div class="about__bio">
+          <div class="terminal-block">
+            <div class="terminal-block__header">
+              <span class="prompt">></span> bio.txt
+            </div>
+            <div class="terminal-block__content">
+              <p>
+                <span class="highlight">Welcome, traveler.</span> I'm a passionate developer 
+                who sees code as an art form. Just like Neo discovered the truth behind the Matrix, 
+                I've found my purpose in creating digital experiences that matter.
+              </p>
+              <p>
+                With expertise in both frontend and backend technologies, I build applications 
+                that are not just functional, but memorable. Every line of code is a choice - 
+                I choose to make it count.
+              </p>
+              <p class="signature">
+                - Neo Anderson
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="about__stats">
+          <div class="stat-card">
+            <div class="stat-card__number glitch" data-text="5+">5+</div>
+            <div class="stat-card__label">Years Experience</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card__number glitch" data-text="50+">50+</div>
+            <div class="stat-card__label">Projects Completed</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card__number glitch" data-text="30+">30+</div>
+            <div class="stat-card__label">Technologies</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card__number glitch" data-text="100%">100%</div>
+            <div class="stat-card__label">Commitment</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Projects Section -->
+  <section id="projects" class="section projects">
+    <div class="container">
+      <h2 class="section-title" data-text="Projects">
+        <span class="prompt">></span> Projects
+      </h2>
+      
+      <!-- Filter -->
+      <div class="project-filter">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web Apps</button>
+        <button class="filter-btn" data-filter="mobile">Mobile</button>
+        <button class="filter-btn" data-filter="game">Games</button>
+      </div>
+      
+      <!-- Projects Grid -->
+      <div class="projects__grid">
+        <!-- Project 1 -->
+        <article class="project-card" data-category="web" data-tech="react,node">
+          <div class="project-card__image">
+            <div class="project-card__placeholder">
+              <span class="placeholder-icon">🌐</span>
+            </div>
+            <div class="project-card__overlay">
+              <a href="#" class="project-card__link">View Demo</a>
+            </div>
+          </div>
+          <div class="project-card__content">
+            <h3 class="project-card__title">Matrix Dashboard</h3>
+            <p class="project-card__description">
+              Real-time analytics dashboard with Matrix-inspired UI. 
+              Features live data visualization and terminal-style commands.
+            </p>
+            <div class="project-card__tech">
+              <span class="tech-badge">React</span>
+              <span class="tech-badge">Node.js</span>
+              <span class="tech-badge">D3.js</span>
+            </div>
+            <div class="project-card__links">
+              <a href="#" class="project-card__btn">
+                <span>🔗</span> Live
+              </a>
+              <a href="#" class="project-card__btn">
+                <span>📦</span> Code
+              </a>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Project 2 -->
+        <article class="project-card" data-category="web" data-tech="vue,python">
+          <div class="project-card__image">
+            <div class="project-card__placeholder">
+              <span class="placeholder-icon">🛒</span>
+            </div>
+            <div class="project-card__overlay">
+              <a href="#" class="project-card__link">View Demo</a>
+            </div>
+          </div>
+          <div class="project-card__content">
+            <h3 class="project-card__title">E-Commerce Platform</h3>
+            <p class="project-card__description">
+              Full-stack e-commerce solution with secure payments, 
+              inventory management, and real-time order tracking.
+            </p>
+            <div class="project-card__tech">
+              <span class="tech-badge">Vue.js</span>
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">PostgreSQL</span>
+            </div>
+            <div class="project-card__links">
+              <a href="#" class="project-card__btn">
+                <span>🔗</span> Live
+              </a>
+              <a href="#" class="project-card__btn">
+                <span>📦</span> Code
+              </a>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Project 3 -->
+        <article class="project-card" data-category="mobile" data-tech="react-native,firebase">
+          <div class="project-card__image">
+            <div class="project-card__placeholder">
+              <span class="placeholder-icon">📱</span>
+            </div>
+            <div class="project-card__overlay">
+              <a href="#" class="project-card__link">View Demo</a>
+            </div>
+          </div>
+          <div class="project-card__content">
+            <h3 class="project-card__title">Fitness Tracker App</h3>
+            <p class="project-card__description">
+              Mobile app for tracking workouts, nutrition, and progress. 
+              Includes AI-powered workout recommendations.
+            </p>
+            <div class="project-card__tech">
+              <span class="tech-badge">React Native</span>
+              <span class="tech-badge">Firebase</span>
+              <span class="tech-badge">TensorFlow</span>
+            </div>
+            <div class="project-card__links">
+              <a href="#" class="project-card__btn">
+                <span>🔗</span> Live
+              </a>
+              <a href="#" class="project-card__btn">
+                <span>📦</span> Code
+              </a>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Project 4 -->
+        <article class="project-card" data-category="game" data-tech="unity,csharp">
+          <div class="project-card__image">
+            <div class="project-card__placeholder">
+              <span class="placeholder-icon">🎮</span>
+            </div>
+            <div class="project-card__overlay">
+              <a href="#" class="project-card__link">View Demo</a>
+            </div>
+          </div>
+          <div class="project-card__content">
+            <h3 class="project-card__title">Cyber Runner</h3>
+            <p class="project-card__description">
+              2D platformer game with cyberpunk aesthetics. 
+              Features procedural level generation and boss battles.
+            </p>
+            <div class="project-card__tech">
+              <span class="tech-badge">Unity</span>
+              <span class="tech-badge">C#</span>
+              <span class="tech-badge">Blender</span>
+            </div>
+            <div class="project-card__links">
+              <a href="#" class="project-card__btn">
+                <span>🔗</span> Live
+              </a>
+              <a href="#" class="project-card__btn">
+                <span>📦</span> Code
+              </a>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Project 5 -->
+        <article class="project-card" data-category="web" data-tech="nextjs,typescript">
+          <div class="project-card__image">
+            <div class="project-card__placeholder">
+              <span class="placeholder-icon">💼</span>
+            </div>
+            <div class="project-card__overlay">
+              <a href="#" class="project-card__link">View Demo</a>
+            </div>
+          </div>
+          <div class="project-card__content">
+            <h3 class="project-card__title">Portfolio Generator</h3>
+            <p class="project-card__description">
+              SaaS platform that generates custom portfolio websites 
+              from GitHub profiles. AI-powered content suggestions.
+            </p>
+            <div class="project-card__tech">
+              <span class="tech-badge">Next.js</span>
+              <span class="tech-badge">TypeScript</span>
+              <span class="tech-badge">Vercel</span>
+            </div>
+            <div class="project-card__links">
+              <a href="#" class="project-card__btn">
+                <span>🔗</span> Live
+              </a>
+              <a href="#" class="project-card__btn">
+                <span>📦</span> Code
+              </a>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Project 6 -->
+        <article class="project-card" data-category="mobile" data-tech="flutter,dart">
+          <div class="project-card__image">
+            <div class="project-card__placeholder">
+              <span class="placeholder-icon">💬</span>
+            </div>
+            <div class="project-card__overlay">
+              <a href="#" class="project-card__link">View Demo</a>
+            </div>
+          </div>
+          <div class="project-card__content">
+            <h3 class="project-card__title">Secure Chat</h3>
+            <p class="project-card__description">
+              End-to-end encrypted messaging app with self-destructing 
+              messages and anonymous mode.
+            </p>
+            <div class="project-card__tech">
+              <span class="tech-badge">Flutter</span>
+              <span class="tech-badge">Dart</span>
+              <span class="tech-badge">WebRTC</span>
+            </div>
+            <div class="project-card__links">
+              <a href="#" class="project-card__btn">
+                <span>🔗</span> Live
+              </a>
+              <a href="#" class="project-card__btn">
+                <span>📦</span> Code
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Skills Section -->
+  <section id="skills" class="section skills">
+    <div class="container">
+      <h2 class="section-title" data-text="Skills">
+        <span class="prompt">></span> Skills
+      </h2>
+      
+      <div class="skills__grid">
+        <!-- Frontend -->
+        <div class="skills__category">
+          <h3 class="skills__category-title">
+            <span class="icon">🎨</span> Frontend
+          </h3>
+          <div class="skills__list">
+            <div class="skill-item">
+              <span class="skill-name">HTML/CSS</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-level="95"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">JavaScript</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-level="90"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">React</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-level="85"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Vue.js</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-level="80"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">TypeScript</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-level="75"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Backend -->
+        <div class="skills__category">
+          <h3 class="skills__category-title">
+            <span class="icon">⚙️</span> Backend
+          </h3>
+          <div class="skills__list">
+            <div class="skill-item">
+              <span class="skill-name">Node.js</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-level="90"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Python</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-level="85"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">PostgreSQL</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-level="80"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">MongoDB</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-level="75"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">GraphQL</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-level="70"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Tools -->
+        <div class="skills__category">
+          <h3 class="skills__category-title">
+            <span class="icon">🛠️</span> Tools
+          </h3>
+          <div class="skills__badges">
+            <span class="skill-badge">Git</span>
+            <span class="skill-badge">Docker</span>
+            <span class="skill-badge">AWS</span>
+            <span class="skill-badge">Linux</span>
+            <span class="skill-badge">Figma</span>
+            <span class="skill-badge">VS Code</span>
+            <span class="skill-badge">Webpack</span>
+            <span class="skill-badge">Jest</span>
+            <span class="skill-badge">CI/CD</span>
+            <span class="skill-badge">Agile</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Contact Section -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <h2 class="section-title" data-text="Contact">
+        <span class="prompt">></span> Contact
+      </h2>
+      <p class="section-subtitle">Initialize a connection</p>
+      
+      <div class="contact__grid">
+        <!-- Contact Form -->
+        <form class="matrix-form" id="contact-form" action="https://formspree.io/f/your-id" method="POST">
+          <div class="form-group">
+            <label for="name" class="form-label">
+              <span class="label-prompt">></span> Identity
+            </label>
+            <input 
+              type="text" 
+              id="name" 
+              name="name" 
+              class="form-input" 
+              required
+              autocomplete="name"
+              placeholder="Enter your name"
+            >
+            <span class="form-error" id="name-error"></span>
+          </div>
+          
+          <div class="form-group">
+            <label for="email" class="form-label">
+              <span class="label-prompt">></span> Transmission Address
+            </label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              class="form-input" 
+              required
+              autocomplete="email"
+              placeholder="neo@matrix.com"
+            >
+            <span class="form-error" id="email-error"></span>
+          </div>
+          
+          <div class="form-group">
+            <label for="message" class="form-label">
+              <span class="label-prompt">></span> Message Data
+            </label>
+            <textarea 
+              id="message" 
+              name="message" 
+              class="form-input form-textarea" 
+              rows="5"
+              required
+              placeholder="Enter your message..."
+            ></textarea>
+            <span class="form-error" id="message-error"></span>
+          </div>
+          
+          <button type="submit" class="form-submit">
+            <span class="btn-text">Transmit</span>
+            <span class="btn-loader" hidden>
+              <span class="loader-dot"></span>
+              <span class="loader-dot"></span>
+              <span class="loader-dot"></span>
+            </span>
+          </button>
+          
+          <div class="form-status" id="form-status" hidden></div>
+        </form>
+        
+        <!-- Alternative Contact -->
+        <div class="contact-info">
+          <h3 class="contact-title">Direct Connection</h3>
+          
+          <div class="contact-method">
+            <span class="contact-icon">📧</span>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:neo@matrix.com" class="contact-link">neo@matrix.com</a>
+            </div>
+          </div>
+          
+          <div class="contact-method">
+            <span class="contact-icon">💼</span>
+            <div>
+              <h4>LinkedIn</h4>
+              <a href="https://linkedin.com/in/neo" class="contact-link" target="_blank">Connect</a>
+            </div>
+          </div>
+          
+          <div class="contact-method">
+            <span class="contact-icon">🐙</span>
+            <div>
+              <h4>GitHub</h4>
+              <a href="https://github.com/neo" class="contact-link" target="_blank">View Code</a>
+            </div>
+          </div>
+          
+          <div class="contact-method">
+            <span class="contact-icon">🐦</span>
+            <div>
+              <h4>Twitter</h4>
+              <a href="https://twitter.com/neo" class="contact-link" target="_blank">Follow</a>
+            </div>
+          </div>
+          
+          <div class="contact-method">
+            <span class="contact-icon">📍</span>
+            <div>
+              <h4>Location</h4>
+              <span class="contact-text">Zion, Real World</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <p class="footer__text">
+          <span class="prompt">></span> 
+          <span class="typewriter" id="footer-year">2024</span>
+        </p>
+        <p class="footer__text">
+          Crafted with <span class="highlight">♥</span> in the Matrix
+        </p>
+        <p class="footer__text">
+          <span class="prompt">></span> All systems operational
+        </p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Scripts -->
+  <script src="js/matrix-rain.js"></script>
+  <script src="js/terminal.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
