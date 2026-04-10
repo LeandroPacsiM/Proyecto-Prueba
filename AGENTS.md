@@ -1,25 +1,25 @@
-# Project Context
+# Contexto del Proyecto
 
-**Status:** Portfolio website project - initialized and ready for development
+**Estado:** Portafolio web personal - completo y listo para desarrollo
 
-## Repository
+## Repositorio
 
-- **Owner:** Leandro Javier Pacsi Mamani
-- **Remote:** https://github.com/LeandroPacsiM/Proyecto-Prueba
+- **Propietario:** Leandro Javier Pacsi Mamani
+- **Remoto:** https://github.com/LeandroPacsiM/Proyecto-Prueba
 
-## Git Branches
+## Ramas Git
 
-- `main` - production branch (current)
-- `develop` - development branch
-- `feature/leandro-pacsi` - feature branch
+- `main` - rama de producción (actual)
+- `develop` - rama de desarrollo
+- `feature/leandro-pacsi` - rama de funcionalidades
 
-## Project Structure
+## Estructura del Proyecto
 
 ```
 Proyecto-Prueba/
-├── AGENTS.md              # This file - agent instructions
+├── AGENTS.md              # Este archivo - instrucciones para agentes
 ├── .opencode/
-│   └── skills/            # Reusable agent skills
+│   └── skills/            # Habilidades reutilizables del agente
 │       ├── project-init/
 │       ├── web-component/
 │       ├── portfolio-section/
@@ -31,57 +31,63 @@ Proyecto-Prueba/
 │       ├── animation-utils/
 │       ├── project-showcase/
 │       └── contact-form/
-└── index.html             # Main entry point
+├── css/
+│   └── styles.css         # Estilos completos del portafolio
+├── js/
+│   ├── main.js            # JavaScript principal
+│   ├── terminal.js        # Componente terminal interactivo
+│   └── matrix-rain.js     # Efecto lluvia digital
+└── index.html             # Punto de entrada principal (647 líneas)
 ```
 
-## Available Skills
+## Habilidades Disponibles
 
-This project has custom skills to standardize common tasks:
+Este proyecto tiene habilidades personalizadas para estandarizar tareas comunes:
 
-### Core Skills
-| Skill | Purpose |
-|-------|---------|
-| `project-init` | Initialize web project structure from scratch |
-| `web-component` | Create reusable UI components with accessibility |
-| `portfolio-section` | Build portfolio sections (hero, about, projects, skills, contact) |
+### Habilidades Principales
+| Habilidad | Propósito |
+|-----------|-----------|
+| `project-init` | Inicializar estructura de proyecto web desde cero |
+| `web-component` | Crear componentes UI reutilizables con accesibilidad |
+| `portfolio-section` | Construir secciones del portafolio (hero, about, projects, skills, contact) |
 
-### Matrix Aesthetic Skills
-| Skill | Purpose |
-|-------|---------|
-| `matrix-theme` | Apply Matrix color palette (green/black) and cyberpunk styling |
-| `matrix-effects` | Implement digital rain, glitch, and typing animations |
-| `terminal-ui` | Create terminal/command-line inspired UI components |
-| `page-transition` | Add smooth transitions with code decode effects |
+### Habilidades de Estética Matrix
+| Habilidad | Propósito |
+|-----------|-----------|
+| `matrix-theme` | Aplicar paleta de colores Matrix (verde/negro) y estilo cyberpunk |
+| `matrix-effects` | Implementar lluvia digital, glitch y animaciones de escritura |
+| `terminal-ui` | Crear componentes UI inspirados en terminal/línea de comandos |
+| `page-transition` | Añadir transiciones suaves con efectos de descodificación de código |
 
-### Utility Skills
-| Skill | Purpose |
-|-------|---------|
-| `responsive-layout` | Build mobile-first responsive layouts |
-| `animation-utils` | Reusable CSS/JS animations optimized for 60fps |
-| `project-showcase` | Display projects with filters and Matrix hover effects |
-| `contact-form` | Build contact forms with validation and Matrix styling |
+### Habilidades Utilitarias
+| Habilidad | Propósito |
+|-----------|-----------|
+| `responsive-layout` | Construir layouts responsivos mobile-first |
+| `animation-utils` | Animaciones CSS/JS reutilizables optimizadas para 60fps |
+| `project-showcase` | Mostrar proyectos con filtros y efectos hover estilo Matrix |
+| `contact-form` | Crear formularios de contacto con validación y estilo Matrix |
 
-## How to Work in This Project
+## Cómo Trabajar en Este Proyecto
 
-### Starting new features
-1. Ask about requirements first
-2. Use appropriate skill for the task
-3. Follow mobile-first, accessibility-first approach
+### Iniciar nuevas funcionalidades
+1. Preguntar sobre los requisitos primero
+2. Usar la habilidad apropiada para la tarea
+3. Seguir enfoque mobile-first, accesibilidad-first
 
-### Code conventions
-- **HTML:** Semantic HTML5, proper heading hierarchy, ARIA when needed
-- **CSS:** Mobile-first, CSS custom properties, BEM naming
-- **JS:** ES6+ syntax, const/let over var, event delegation
+### Convenciones de código
+- **HTML:** HTML5 semántico, jerarquía de headings adecuada, ARIA cuando sea necesario
+- **CSS:** Mobile-first, CSS custom properties, nomenclatura BEM
+- **JS:** Sintaxis ES6+, const/let sobre var, event delegation
 
-### Quality checklist
-- [ ] Responsive on mobile/tablet/desktop
-- [ ] Accessible (keyboard nav, screen reader friendly)
-- [ ] Fast loading (optimized images, minimal dependencies)
-- [ ] Clean, commented code
+### Lista de calidad
+- [ ] Responsivo en mobile/tablet/desktop
+- [ ] Accesible (navegación por teclado, amigo para lectores de pantalla)
+- [ ] Carga rápida (imágenes optimizadas, dependencias mínimas)
+- [ ] Código limpio y comentado
 
-## Notes
+## Notas
 
-- This is a personal portfolio project
-- Prefer vanilla JS unless complexity requires a framework
-- Keep design simple and professional
-- Commit frequently with descriptive messages
+- Este es un proyecto de portafolio personal
+- Preferir JS vanilla a menos que la complejidad requiera un framework
+- Mantener el diseño simple y profesional
+- Después de completar una tarea de construcción, recomendar un mensaje de commit al usuario (no hacer commit automáticamente - preguntar primero)
