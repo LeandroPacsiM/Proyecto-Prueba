@@ -38,7 +38,7 @@ El proyecto demuestra dominio de HTML5, CSS3 y JavaScript vanilla, implementando
 
 ## 🚀 Live Demo
 
-[View Demo](https://LeandroPacsiM.github.io/Proyecto-Prueba/)
+[View Demo](https://LeandroPacsiM.github.io/Portafolio-Matrix/)
 
 ## 💻 Usage
 
@@ -69,7 +69,7 @@ Completa los campos (nombre, email, mensaje) y envía. La validación es en tiem
 ## 📁 Project Structure
 
 ```
-Proyecto-Prueba/
+Portafolio-Matrix/
 ├── README.md                 # Documentación del proyecto
 ├── AGENTS.md                 # Instrucciones para agentes de IA
 ├── index.html                # Página principal (647 líneas)
@@ -108,8 +108,8 @@ Proyecto-Prueba/
 
 1. Clona el repositorio:
 ```bash
-git clone https://github.com/LeandroPacsiM/Proyecto-Prueba.git
-cd Proyecto-Prueba
+git clone https://github.com/LeandroPacsiM/Portafolio-Matrix.git
+cd Portafolio-Matrix
 ```
 
 2. Abre el archivo `index.html` en tu navegador:
