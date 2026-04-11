@@ -5,7 +5,7 @@
 ## Repositorio
 
 - **Propietario:** Leandro Javier Pacsi Mamani
-- **Remoto:** https://github.com/LeandroPacsiM/Proyecto-Prueba
+- **Remoto:** https://github.com/LeandroPacsiM/Portafolio-Matrix
 
 ## Ramas Git
 
@@ -16,7 +16,7 @@
 ## Estructura del Proyecto
 
 ```
-Proyecto-Prueba/
+Portafolio-Matrix/
 ├── AGENTS.md              # Este archivo - instrucciones para agentes
 ├── .opencode/
 │   └── skills/            # Habilidades reutilizables del agente
